@@ -1,0 +1,7 @@
+{
+  "name": "Wedding Website",
+  "description": "A wedding website to recieve RSVPs",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}
