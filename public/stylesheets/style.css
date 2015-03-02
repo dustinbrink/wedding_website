@@ -3,13 +3,18 @@
     src: url('../fonts/Precious.ttf');
 }
 
+html {
+    background-color: black;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: white;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 #wrap {
@@ -26,14 +31,17 @@ a {
 
 #header h1 {
     font-family: Precious;
+    font-size: 4em;
+    margin-bottom: 0;
 }
 
 #header h2 {
-
+    margin-top: 0;
 }
 
 #header h3 {
-
+    font-weight: bold;
+    font-size: 2em;
 }
 
 #nav {
@@ -53,4 +61,8 @@ a {
 
 #footer {
     text-align: center;
+}
+
+#canvas {
+    display: none;
 }
