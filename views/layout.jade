@@ -6,4 +6,27 @@ html(lang="en")
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='/javascripts/jquery/jquery.min.js')
     body
-        block content
+        div(id='wrap')
+
+            div(id='header')
+                h1 Dustin & Kaitlynn
+                h2 Wedding Reception
+                h3 June 6th 2015
+
+            ul(id='nav')
+                li
+                    a(href='/') Welcome
+                li
+                    a(href='/rsvp') RSVP
+                li
+                    a(href='/location') Location
+                li
+                    a(href='/accommodations') Accommodations
+                li
+                    a(href='/registry') Registery
+
+            div(id='content')
+                block content
+
+            hr
+            div(id='footer') &copy; 2015 Dustin Brink

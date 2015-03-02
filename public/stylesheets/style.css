@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Precious;
+    src: url('../fonts/Precious.ttf');
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +10,47 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: auto;
+    max-width: 900px;
+}
+
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    font-family: Precious;
+}
+
+#header h2 {
+
+}
+
+#header h3 {
+
+}
+
+#nav {
+    list-style: none;
+    float: left;
+    width: 25%;
+}
+
+#nav ul {
+
+}
+
+#content {
+    word-wrap: break-word;
+    margin-left: 25%;
+}
+
+#footer {
+    text-align: center;
 }
