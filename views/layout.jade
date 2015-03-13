@@ -9,7 +9,7 @@ html(lang="en")
         script(type='text/javascript', src='/javascripts/peng/start.js')
         script(type='text/javascript', src='/javascripts/nav.js')
     body
-        div(id='wrap')
+        div(id='wrap' class='bg')
             canvas(id='canvas')
 
             div(id='header')
@@ -22,13 +22,13 @@ html(lang="en")
                     li
                         a(href='javascript:void(0)')!= tab.name
 
-            div(id='content')
-                each tab in tabs
-                    div(id='#{tab.name}' class='hide')
-                        h1!= tab.name
-                        div!= tab.text
+            div(id='content-container')
+                div(id='content-bg' class='bg')
+                div(id='content')
+                    each tab in tabs
+                        div(id='#{tab.name}' class='hide')
+                            h1!= tab.name
+                            div!= tab.text
 
             hr
             div(id='footer')!= text.footer
-
-            img(class='bg')

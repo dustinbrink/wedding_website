@@ -2,8 +2,8 @@ var canvas, ctx;
 $(document).ready(function() {
     if (canvas = $('#canvas')[0]) {
         ctx = canvas.getContext('2d');
-        canvas.width = 768;
-        canvas.height = 640;
+        canvas.width = 900;
+        canvas.height = 480;
 
         var clearCanvas = function () {
             ctx.fillStyle = '#000';
@@ -39,10 +39,13 @@ $(document).ready(function() {
             pEng.draw();
 
             //draw fps
-            pEng.fps.draw();
+            //pEng.fps.draw();
+
+            var imageData = canvas.toDataURL();
 
             //dynamic background
-            $('.bg').attr('src', canvas.toDataURL());
+            $('.bg').css('background-image', 'url("' + imageData + '")');
+
         }
 
         function tick() {
@@ -50,8 +53,9 @@ $(document).ready(function() {
             lastTick = Date.now();
         }
 
-        //var lastTick = Date.now();
-        //setInterval(tick, 24); //30fps
-        //render();
+        // uncomment below to start
+        var lastTick = Date.now();
+        setInterval(tick, 24); //30fps
+        render();
     }
 });
