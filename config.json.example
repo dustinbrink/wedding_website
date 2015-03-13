@@ -2,5 +2,34 @@
   "email": {
     "to": "",
     "from": ""
-  }
+  },
+  "text": {
+    "pagetitle": "",
+    "title": "",
+    "subtitle": "",
+    "date": "",
+    "footer": ""
+  },
+  "tabs": [
+    {
+      "name": "Welcome",
+      "text": ""
+    },
+    {
+      "name": "RSVP",
+      "text": ""
+    },
+    {
+      "name": "Location",
+      "text": ""
+    },
+    {
+      "name": "Accommodations",
+      "text": ""
+    },
+    {
+      "name": "Registery",
+      "text": ""
+    }
+  ]
 }

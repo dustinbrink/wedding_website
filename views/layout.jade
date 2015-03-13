@@ -2,34 +2,33 @@ doctype html
 html(lang="en")
     head
         meta(charset='utf-8')
-        title Kaitlynn & Dustin's Wedding Reception
+        title= text.pagetitle
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(type='text/javascript', src='/javascripts/jquery/jquery.min.js')
         script(type='text/javascript', src='/javascripts/peng/peng.js')
         script(type='text/javascript', src='/javascripts/peng/start.js')
+        script(type='text/javascript', src='/javascripts/nav.js')
     body
         div(id='wrap')
             canvas(id='canvas')
 
             div(id='header')
-                h1 Dustin & Kaitlynn
-                h2 Wedding Reception
-                h3 June 6th 2015
+                h1!= text.title
+                h2!= text.subtitle
+                h3!= text.date
 
             ul(id='nav')
-                li
-                    a(href='/') Welcome
-                li
-                    a(href='/rsvp') RSVP
-                li
-                    a(href='/location') Location
-                li
-                    a(href='/accommodations') Accommodations
-                li
-                    a(href='/registry') Registery
+                each tab in tabs
+                    li
+                        a(href='javascript:void(0)')!= tab.name
 
             div(id='content')
-                block content
+                each tab in tabs
+                    div(id='#{tab.name}' class='hide')
+                        h1!= tab.name
+                        div!= tab.text
 
             hr
-            div(id='footer') &copy; 2015 Dustin Brink
+            div(id='footer')!= text.footer
+
+            img(class='bg')

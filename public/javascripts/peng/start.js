@@ -42,8 +42,7 @@ $(document).ready(function() {
             pEng.fps.draw();
 
             //dynamic background
-            var imageDataURL = canvas.toDataURL();
-            document.body.style.background = "transparent url('"+imageDataURL+"') repeat-x";
+            $('.bg').attr('src', canvas.toDataURL());
         }
 
         function tick() {
@@ -51,8 +50,8 @@ $(document).ready(function() {
             lastTick = Date.now();
         }
 
-        var lastTick = Date.now();
-        setInterval(tick, 33.33); //30fps
-        render();
+        //var lastTick = Date.now();
+        //setInterval(tick, 24); //30fps
+        //render();
     }
 });
