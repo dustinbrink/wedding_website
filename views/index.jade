@@ -1,6 +1,49 @@
 extends layout
+
+block title
+    title= text.pagetitle
+
 block content
-    h1 Welcome
-    div!= text.welcome
+    canvas(id='canvas')
+
+    div(id='header')
+        h1!= text.title
+        h2!= text.subtitle
+        h3!= text.date
+
+    ul(id='nav')
+        each tab in tabs
+            li
+                a(href='javascript:void(0)')!= tab.name
+
+    div(id='content-container')
+        div(id='content-bg' class='bg')
+        div(id='content')
+            each tab in tabs
+                div(id='#{tab.name}' class='hide')
+                    h1!= tab.name
+                    div!= tab.text
+                    case tab.name
+                        when 'Location'
+                            p
+                                div(class='div-table')
+                                    div(class='div-row')
+                                        div(class='div-col')!= text.hotel
+                                        div(class='div-col')!= text.time
+                                        div(class='div-col')!= text.date
+                            iframe(id='map' width='600' height='450' frameborder='0' style='border:0' src='#{tab.googleMapsUrl}')
+                        when 'RSVP'
+                            form(id='rsvp_form' action='/rsvp' method='post')
+                                fieldset
+                                    input(type='text', value='', placeholder='Guest Name', name='name')
+                                fieldset(data-role='controlgroup')
+                                    input(type='text', value='', placeholder='Number of Guests', name='guests')
+                                fieldset(data-role='controlgroup')
+                                    textarea(rows='6', cols='50', value='', placeholder='Comments', name='comments')
+                                input(type='submit', value='RSVP', data-transition='fade', data-theme='c')
+
+    div(id='footer')
+        hr
+        p!= text.footer
 
 

@@ -21,9 +21,15 @@ $(document).ready(function() {
         selectTab($(this));
     });
 
-    $('#rsvp').submit(function(e) {
-        alert( "Handler for .submit() called." );
+    $('#rsvp_form').submit(function(e) {
         e.preventDefault();
+        $.post('/rsvp', {
+            name: $('#rsvp_form [name="name"]').val(),
+            guests: $('#rsvp_form [name="guests"]').val(),
+            comments: $('#rsvp_form [name="comments"]').val()
+        }).done(function() {
+            $('#rsvp_form').html('<p>Thank you for your RSVP.</p><p>We will see you soon!</p>');
+        })
     });
 
     selectTab($('#nav a').first());

@@ -11,19 +11,13 @@ router.get('/', function(req, res, next) {
     });
 });
 
-
-router.get('/rsvp', function(req, res) {
-    res.render('rsvp');
-});
-
-
 router.post('/rsvp', function(req, res) {
     sendRSVPEmail(req.body.name, req.body.guests, req.body.comments);
-    res.send('Got a POST request');
+    res.send('RSVP recieved');
 });
 
 
-sendRSVPEmail = function(name, guests) {
+sendRSVPEmail = function(name, guests, comments) {
     var transporter = nodemailer.createTransport();
     //var transporter = nodemailer.createTransport({
     //    service: 'gmail',
@@ -33,15 +27,13 @@ sendRSVPEmail = function(name, guests) {
     //    }
     //});
     var params = {
-        from: config.email.from,
-        to: config.email.to,
+        from: process.env.emailFrom,
+        to: process.env.emailTo,
         subject: 'Wedding RSVP',
         text: 'Name: '+name + '\r\n' +
-        '# of Guests: '+ guests + '\r\n' +
-        'Comments: ' + comments
+              '# of Guests: '+ guests + '\r\n' +
+              'Comments: ' + comments
     }
-    console.log('Sending email: ')
-    console.log(params);
     transporter.sendMail(params);
 };
 

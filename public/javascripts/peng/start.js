@@ -54,8 +54,8 @@ $(document).ready(function() {
         }
 
         // uncomment below to start
-        //var lastTick = Date.now();
-        //setInterval(tick, 24); //30fps
-        //render();
+        var lastTick = Date.now();
+        setInterval(tick, 24); //30fps
+        render();
     }
 });
