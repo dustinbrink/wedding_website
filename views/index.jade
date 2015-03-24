@@ -23,7 +23,7 @@ block content
                 div(id='#{tab.name}' class='hide')
                     h1!= tab.name
                     if tab.img
-                        img(src='images/#{tab.img}')
+                        img(src='#{tab.img}')
                     div!= tab.text
                     case tab.name
                         when 'Location'
