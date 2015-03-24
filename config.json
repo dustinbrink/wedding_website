@@ -16,7 +16,7 @@
     },
     {
       "name": "RSVP",
-      "text": "Please submit the form below to RSVP"
+      "rsvp_text": "Please submit the form below to RSVP"
     },
     {
       "name": "Location",

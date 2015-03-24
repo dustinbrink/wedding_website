@@ -36,6 +36,7 @@ block content
                             iframe(id='map' width='600' height='450' frameborder='0' style='border:0' src='#{tab.googleMapsUrl}')
                         when 'RSVP'
                             form(id='rsvp_form' action='/rsvp' method='post')
+                                p!= tab.rsvp_text
                                 fieldset
                                     input(type='text', value='', placeholder='Guest Name', name='name')
                                 fieldset(data-role='controlgroup')
