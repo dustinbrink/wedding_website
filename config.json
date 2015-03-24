@@ -11,6 +11,7 @@
   "tabs": [
     {
       "name": "Welcome",
+      "img": "tulum.jpg",
       "text": "<p>It was late October when Dustin and I took a week long vacation to tropical paradise. We took long walks on the white sandy beach and basked in each other’s company. It seemed like nothing else existed outside of our little dream bubble. We took a snorkeling trip in Cozumel. Since the water is crystal clear, more sunlight can penetrate deeper and this allows corals to grow at deeper depths. The majesty of something so beautiful and natural left me breathless.</p><p>We went to a nightclub named “Coco Bongo” they had live performers. It was a spectacle to see. Flashing lights and crazy dancers, who could ask for more?</p><p>We walked around some areas you probably shouldn’t, but we found some of the most incredible food trucks. Our favorite was al pastor: crisp-thin shavings of vertical spit-roasted pork.</p><p>We woke up when the sun rose, cooked some chorizo and started everyday with a new adventure. Siesta in the afternoon to beat the heat, and long walks on the beach at night. We never wanted to leave.</p><p>Public transportation is pretty incredible, we took a 3 hour bus ride to Chichen Itza. Built by the pre-Columbian Maya civilization. It served as a temple to the god Kukulkan, the Yucatec Maya feathered serpent deity. It was here that Dustin took a small box out of his backpack and got down on one knee. Opened the box to reveal a glistening ring. He said “Will you do me the honor of marrying me?”. I started to cry, I couldn’t speak for a second. It was difficult to take everything in. I had the most incredible trip of my life and this man wants to make it more. I said yes!<p>"
     },
     {
@@ -28,6 +29,7 @@
     },
     {
       "name": "Registry",
+      "img": "present.png",
       "text": "<p>We are registred at <a href='http://www.amazon.com/registry/wedding/D5RSJLEH9LT'>Amazon.com</a></p><p>if you feel like bringing something, but it is not expected</p>"
     }
   ]

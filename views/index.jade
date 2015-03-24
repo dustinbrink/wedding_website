@@ -22,6 +22,8 @@ block content
             each tab in tabs
                 div(id='#{tab.name}' class='hide')
                     h1!= tab.name
+                    if tab.img
+                        img(src='images/#{tab.img}')
                     div!= tab.text
                     case tab.name
                         when 'Location'
@@ -41,6 +43,7 @@ block content
                                 fieldset(data-role='controlgroup')
                                     textarea(rows='6', cols='50', value='', placeholder='Comments', name='comments')
                                 input(type='submit', value='RSVP', data-transition='fade', data-theme='c')
+                    div(class='clear')
 
     div(id='footer')
         hr
