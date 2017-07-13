@@ -1,6 +1,6 @@
 {
   "name": "wedding_website",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A wedding website to recieve RSVPs",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "nodemailer": "~1.3.1"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "8.1.x"
   },
   "repository": {
     "type": "git",
